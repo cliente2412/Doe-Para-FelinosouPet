@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adoção de Gatinhos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf6f0;
+      color: #333;
+
+      .flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.flex-row > div {
+  flex: 1 1 300px;
+}
+
+    }
+
+    header {
+      background-color: #ffb6b6;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .cat-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .cat-card:hover {
+      transform: scale(1.02);
+    }
+
+    .cat-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .cat-card .info {
+      padding: 1rem;
+    }
+
+    .cat-card .info h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    .cat-card .info p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #ff7b7b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+    }
+
+    .modal-content input, .modal-content textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .close-btn {
+      background: #ccc;
+      color: #000;
+      float: right;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AJUDE UM FELINO</h1>
+  <p>COM APENAS 1 REAL</p>
+</header>
+
+<main class="container">
+  <div class="cat-card">
+    <img src="https://fotos.amomeupet.org/uploads/fotos/660x0_1620305942_6093e816b2d27_hd.webp" alt="Gatinho 1" >
+    <div class="info">
+      <h3>Bolinha,Tom,Marron E Zezinho</h3>
+      <p>Bolinha E Seus Irmãos Foram Resgatados Do Lixão De SP. Doe 1 Real Ou Mas Se Voçês Setirem</p>
+      <button class="btn" onclick="openModal('Bolinha')">Adotar</button>
+    </div>
+  </div>
+  <div class="cat-card">
+    <img src="https://placekitten.com/401/300" alt="Gatinho 2">
+    <div class="info">
+      <h3>Luna</h3>
+      <p>Luna é uma fêmea dócil, ideal para apartamento.</p>
+      <button class="btn" onclick="openModal('Luna')">Adotar</button>
+    </div>
+  </div>
+  <div class="cat-card">
+    <img src="https://placekitten.com/402/300" alt="Gatinho 3">
+    <div class="info">
+      <h3>Mingau</h3>
+      <p>Mingau tem 6 meses e está vacinado. Muito carinhoso!</p>
+      <button class="btn" onclick="openModal('Mingau')">Adotar</button>
+    </div>
+  </div>
+</main>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal()">×</button>
+    <h2>Adotar <span id="catName"></span></h2>
+    <input type="text" placeholder="Seu nome" />
+    <input type="email" placeholder="Seu e-mail" />
+    <textarea rows="4" placeholder="Mensagem"></textarea>
+    <button class="btn" onclick="alert('Pedido de adoção enviado!')">Enviar</button>
+  </div>
+</div>
+
+<script>
+  function openModal(catName) {
+    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('catName').innerText = catName;
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+    if (event.target === document.getElementById('modal')) {
+      closeModal();
+    }
+  }
+</script>
+
+</body>
+</html>
