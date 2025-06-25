@@ -6,70 +6,72 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
+            display: flex;
+            justify-content: ;
+            align-items: ;
+            height: 50px;
+            background-color: #f8f8f8;
+        }
 
-    .container {
-      display: flex;
-      gap: 20px; /* espaço entre os itens */
-      flex-wrap: wrap; /* quebra para próxima linha em telas pequenas */
-    }
+        .container {
+            
+            gap: 20px; /* Espaçamento entre os carrinhos */
+        }
 
-    .produto {
-      background: white;
-      padding: 20px;
-      width: 130px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+        .carrinho {
+            width: 95px;
+            padding: 15px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border-radius: 10px;
+        }
 
-    .produto img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
+        .carrinho img {
+            width: 95px;
+            border-radius: 10px;
+        }
 
-    .botao-comprar {
-      margin-top: 10px;
-      padding: 10px;
-      background: #28a745;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+        .carrinho button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-    .botao-comprar:hover {
-      background: #218838;
-    }
+        .carrinho button:hover {
+            background-color: #218838;
+        }
   </style>
 </head>
 <body>
 
   <center><h2>Ajude Um Animal Indefesso</h2></center>
   <center><h2>Doe Um Valor De R$1,00 Ou Mas</h2></center>
+
+  
   <div class="container">
-    <div class="produto">
+    <div class="carrinho">
       <img src="https://via.placeholder.com/250x150" alt="Produto 1">
       <h3>Produto 1</h3>
       <p>R$ 50,00</p>
       <button class="botao-comprar">Comprar</button>
     </div>
 
-    <div class="produto">
+    <div class="carrinho">
       <img src="https://via.placeholder.com/250x150" alt="Produto 2">
       <h3>Produto 2</h3>
       <p>R$ 75,00</p>
       <button class="botao-comprar">Comprar</button>
     </div>
 <div>
-      <div class="container">
+      
 
- <div class="produto">
+ <div class="carrinho">
       <img src="https://via.placeholder.com/250x150" alt="Produto 3">
       <h3>Produto 3</h3>
       <p>R$ 99,90</p>
@@ -77,5 +79,7 @@
     </div>
   </div>
 
+
+    
 </body>
 </html>
