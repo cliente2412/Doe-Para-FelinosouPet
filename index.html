@@ -4,192 +4,197 @@
   <meta charset="UTF-8">
   <title>Doação De caridade</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: ;
-            align-items: ;
-            height: 50px;
-            background-color: #f8f8f8;
-        }
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #0a0a0a);
+      color: #fff;
+    }
 
-        .container {
-            
-            gap: 90px; /* Espaçamento entre os carrinhos */
-        }
+    h1.titulo {
+      text-align: center;
+      margin: 20px 0;
+      color: #0ff;
+      font-size: 2.5em;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+      animation: piscar 1s infinite alternate;
+    }
 
-        .carrinho {
-            width: 345px;
-            padding: 15px;
-            background: ;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            border-radius: 10px;
-        }
+    @keyframes piscar {
+      from {
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+      }
+      to {
+        text-shadow: 0 0 2px #0ff, 0 0 5px #0ff, 0 0 10px #0ff;
+      }
+    }
 
-        .carrinho img {
-            width: 395px;
-            border-radius: 0px;
-        }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
 
-        .carrinho button {
-            margin-top: 40px;
-            padding: 30px;
-            width: 190px;
-            background-color: #28a745;
-            color: ;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+    .produto {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 250px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
 
-        .carrinho button:hover {
-            background-color: #218838;
-        }
+    .produto:hover {
+      transform: scale(1.03);
+    }
+
+    .produto img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .produto h3 {
+      margin: 10px 0 5px;
+    }
+
+    .produto p {
+      margin: 5px 0;
+    }
+
+    .botao {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .botao:hover {
+      background-color: #218838;
+    }
+
+    .sobre-nos {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .selo-seguranca {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .selo-seguranca img {
+      width: 100px;
+      height: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #222;
+      color: white;
+      position: relative;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
-<div class="container">
-<p> Ajude Um Animal Com R$ 1,00 ou Más</p>
-	
-</div>
 
+  <h1 class="titulo">Ajude Um Animal Com R$ 1,00 ou Más</h1>
 
-	
-<div class="container">
+  <div class="container">
+    <!-- Repetição de produtos para preencher a tela -->
+    <div class="produto">
+      <img src="https://via.placeholder.com/200x150" alt="Produto 1">
+      <h3>Produto 1</h3>
+      <p>R$ 49,90</p>
+      <button class="botao">Comprar</button>
+    </div>
 
+    <div class="produto">
+      <img src="https://via.placeholder.com/200x150" alt="Produto 2">
+      <h3>Produto 2</h3>
+      <p>R$ 89,90</p>
+      <button class="botao">Comprar</button>
+    </div>
 
-	
-        <div class="carrinho">
-            <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7qukw-ljvfoyz0sqsjff.webp10px">
-            <p>R$ 79,90</p>
-            <a href="https://s.shopee.com.br/7052biuEMO"><button>Comprar</button></a>
-        </div>
+    <div class="produto">
+      <img src="https://via.placeholder.com/200x150" alt="Produto 3">
+      <h3>Produto 3</h3>
+      <p>R$ 120,00</p>
+      <button class="botao">Comprar</button>
+    </div>
 
+    <div class="produto">
+      <img src="https://via.placeholder.com/200x150" alt="Produto 4">
+      <h3>Produto 4</h3>
+      <p>R$ 59,90</p>
+      <button class="botao">Comprar</button>
+    </div>
 
-        <div class="carrinho">
-            <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m4oua7h0xzr5cf.webp10px">
-            <p>R$ 99,90</p>
-            <a href="https://s.shopee.com.br/50JziS1sg7"><button>Comprar</button></a>
-        </div>
-    
+    <div class="produto">
+      <img src="https://via.placeholder.com/200x150" alt="Produto 5">
+      <h3>Produto 5</h3>
+      <p>R$ 39,90</p>
+      <button class="botao">Comprar</button>
+    </div>
 
+    <div class="produto">
+      <img src="https://via.placeholder.com/200x150" alt="Produto 6">
+      <h3>Produto 6</h3>
+      <p>R$ 74,90</p>
+      <button class="botao">Comprar</button>
+    </div>
+  </div>
 
+  <div class="sobre-nos">
+    <h2>Sobre Nós</h2>
+    <p>
+      Todos os direitos reservados. Cada centavo arrecadado pode ser doado para uma instituição de caridade.
+      Observação: qualquer valor que for doado voluntariamente, mesmo que seja R$ 1,00, será 100% destinado a causas sociais.
+      Ao realizar uma doação e o valor cair na conta da nossa empresa, você está ciente de que esse valor será encaminhado integralmente para caridade.
+      Reforçamos que qualquer doação é totalmente voluntária.
+    </p>
+    <h3>Perguntas Frequentes</h3>
+    <p><strong>Qual instituição será beneficiada?</strong><br>
+    As doações são direcionadas para instituições de proteção animal, incluindo abrigos de cães e gatos.</p>
 
-        <div class="carrinho">
-            <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-ls5odoteuqktac.webp10px">
-            <p>R$ 38,85</p>
-            <a href="https://s.shopee.com.br/9pPFTU0bf2"><button>Comprar</button></a>
-        </div>
+    <p><strong>Existem outras causas apoiadas?</strong><br>
+    Sim! Parte da arrecadação também será destinada a instituições voltadas ao cuidado de crianças em situação de vulnerabilidade e orfanatos que necessitam de apoio.</p>
 
+    <p><strong>Como as doações são distribuídas?</strong><br>
+    Os valores são divididos proporcionalmente entre as instituições de proteção animal (como cães e felinos) e entidades assistenciais para crianças. O objetivo é ajudar tanto os animais quanto os seres humanos mais necessitados.</p>
+  </div>
 
+  <div class="selo-seguranca">
+    <img src="https://www.pngmart.com/files/7/Security-PNG-File.png" alt="Selo de Segurança">
+  </div>
 
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ltmf8549n5z3e2.webp/10px">
-            <p>R$ 85,90</p>
-            <a href="https://s.shopee.com.br/7peB5qZ32p"><button>Comprar</button></a>
-        </div>
-</div>
-<div class="container">
+  <footer>
+    &copy; 2025 Todos os direitos reservados.
+  </footer>
 
-
-	
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ls8hsbujfoctba.webp10px">
-            <p>R$ 145,90</p>
-            <a href="https://s.shopee.com.br/3foc8J6qNZ"><button>Comprar</button></a>
-        </div>
-    
-
-
-
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-ljvfoyvyq6qr8c.webp10px">
-            <p>R$ 119,90</p>
-            <a href="https://s.shopee.com.br/4L4IvejTXV"><button>Comprar</button></a>
-        </div>
-
-	
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lnvgivnwauh89c.webp10px">
-            <p>R$ 62,29</p>
-            <a href="https://s.shopee.com.br/1qMxx9ED1S"><button>Comprar</button></a>
-        </div>
-
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ll0s065io0zjc9.webp10px">
-            <p>R$ 69,90</p>
-            <a href="https://s.shopee.com.br/9UmP5J4AUd"><button>Comprar</button></a>
-        </div>
-</div>
-<div class="container">
-
-
-	
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ls8hsbujfoctba.webp10px">
-            <p>R$ 145,90</p>
-            <a href="https://s.shopee.com.br/3foc8J6qNZ"><button>Comprar</button></a>
-        </div>
-    
-
-
-
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-ljvfoyvyq6qr8c.webp10px">
-            <p>R$ 119,90</p>
-            <a href="https://s.shopee.com.br/4L4IvejTXV"><button>Comprar</button></a>
-        </div>
-
-	
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lnvgivnwauh89c.webp10px">
-            <p>R$ 62,29</p>
-            <a href="https://s.shopee.com.br/1qMxx9ED1S"><button>Comprar</button></a>
-        </div>
-
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ll0s065io0zjc9.webp10px">
-            <p>R$ 69,90</p>
-            <a href="https://s.shopee.com.br/9UmP5J4AUd"><button>Comprar</button></a>
-        </div>
-
-
-</div>
-<div class="container">
-
-
-	
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ls8hsbujfoctba.webp10px">
-            <p>R$ 145,90</p>
-            <a href="https://s.shopee.com.br/3foc8J6qNZ"><button>Comprar</button></a>
-        </div>
-    
-
-
-
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-ljvfoyvyq6qr8c.webp10px">
-            <p>R$ 119,90</p>
-            <a href="https://s.shopee.com.br/4L4IvejTXV"><button>Comprar</button></a>
-        </div>
-
-	
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lnvgivnwauh89c.webp10px">
-            <p>R$ 62,29</p>
-            <a href="https://s.shopee.com.br/1qMxx9ED1S"><button>Comprar</button></a>
-        </div>
-
-        <div class="carrinho">
-            <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ll0s065io0zjc9.webp10px">
-            <p>R$ 69,90</p>
-            <a href="https://s.shopee.com.br/9UmP5J4AUd"><button>Comprar</button></a>
-        </div>
-</div>
-
-
-</div>
 </body>
 </html>
+
